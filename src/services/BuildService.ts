@@ -76,9 +76,9 @@ export class BuildService {
      * Wait for building process to finish
      * @param appId - Subdomain name of an app.
      * @param packageId - Unique identification of the package that build
-     * @param timeOutSeconds - Maximum waiting time for build to complete, default 600s.
+     * @param timeOutSeconds - Maximum waiting time for build to complete, default 1200s.
      */
-    waitForBuild(appId: string, packageId: string, timeOutSeconds = 600): Promise<Package> {
+    waitForBuild(appId: string, packageId: string, timeOutSeconds = 1200): Promise<Package> {
         this.log(`Wait for build: ${appId}, ${packageId}, max ${timeOutSeconds} seconds`);
         return new Promise<Package>((resolve, reject) => {
             const date = Date.now();
