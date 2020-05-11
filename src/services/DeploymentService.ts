@@ -257,9 +257,9 @@ export class DeploymentService {
      * @param appId - Sub-domain name of an app.
      * @param mode - Mode of the environment. Possible values: Test, Acceptance, Production.
      * @param jobId - The identifier which can be used to track the progress of the start action
-     * @param timeOutSeconds - The time in seconds before waiting to start will stop polling, default 600s.
+     * @param timeOutSeconds - The time in seconds before waiting to start will stop polling, default 1200s.
      */
-    waitForStart(appId: string, mode: EnvironmentMode, jobId: string, timeOutSeconds = 600): Promise<EnvironmentStatus> {
+    waitForStart(appId: string, mode: EnvironmentMode, jobId: string, timeOutSeconds = 1200): Promise<EnvironmentStatus> {
         this.log(`Wait for startup: ${appId} ${mode} ${jobId} max ${timeOutSeconds} seconds`);
         return new Promise<EnvironmentStatus>((resolve, reject) => {
             const date = Date.now();
