@@ -1,7 +1,10 @@
 {
   "name": "mendix-widget-build-script",
   "widgetName": "HTMLSnippet",
-  "version": "1.0.3",
+  "version": "1.0.4",
+  "files": [
+    "dist"
+  ],
   "description": "Build script for checkout, build, upload and start a Mendix project in a cloud node",
   "scripts": {
     "copyTest": "copyfiles -f ./tests/HTMLSnippet.mpk ./dist/1.0.1/",
